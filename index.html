@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>黒札ファイナンス｜FICTION PROP</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <div class="prop-ribbon">FICTION PROP</div>
+
+  <header class="hero compact-hero">
+    <nav class="nav">
+      <div class="brand">
+        <span class="logo">黒</span>
+        <div>
+          <strong>黒札ファイナンス</strong>
+          <small>KUROFUDA FINANCE</small>
+        </div>
+      </div>
+      <button class="nav-cta" onclick="scrollToForm()">仮申込</button>
+    </nav>
+
+    <section class="hero-inner">
+      <div class="copy">
+        <p class="eyebrow">MIDNIGHT CASH SERVICE</p>
+        <h1>すぐ欲しい。<br><span>今すぐ、動く。</span></h1>
+        <div class="hero-actions">
+          <button class="primary" onclick="scrollToForm()">30秒診断</button>
+          <button class="ghost" onclick="showPropModal('現在アクセスが集中しています。')">状況確認</button>
+        </div>
+      </div>
+
+      <div class="terminal-card">
+        <div class="terminal-top"><span></span><span></span><span></span></div>
+        <pre id="terminalText">SYSTEM CHECK...
+ACCESS: CHECKING
+STATUS: STANDBY
+MAIL ROUTE: kaukau@mirai.re</pre>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section class="application" id="formArea">
+      <div class="section-head clean-head">
+        <p class="eyebrow">APPLICATION</p>
+        <h2>仮申込フォーム</h2>
+        <div class="mail-destination">送信先：<strong>kaukau@mirai.re</strong></div>
+      </div>
+
+      <form id="propForm" autocomplete="off">
+        <label>お名前
+          <input type="text" placeholder="例：山田 太郎" />
+        </label>
+        <label>希望額
+          <div class="amount-field">
+            <input id="amountInput" type="number" min="0" step="10000" inputmode="numeric" placeholder="例：300000" />
+            <span>円</span>
+          </div>
+          <small class="form-note">金額は自由に入力できます</small>
+        </label>
+        <label>連絡先
+          <input type="text" placeholder="000-0000-0000" />
+        </label>
+        <label>現在の状況
+          <select>
+            <option>急ぎで相談したい</option>
+            <option>本日中に確認したい</option>
+            <option>条件だけ見たい</option>
+          </select>
+        </label>
+        <button class="submit" type="submit">審査開始</button>
+      </form>
+
+      <div class="status-box" id="statusBox">
+        <span class="pulse"></span>
+        <p>待機中</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>黒札ファイナンス / FICTION PROP SITE</p>
+  </footer>
+
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-box">
+      <h3>CHECKING</h3>
+      <p id="modalMessage">受付処理中です。</p>
+      <button onclick="closeModal()">閉じる</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
