@@ -1,15 +1,3 @@
-const menuBtn=document.querySelector('.menu-btn');
-const nav=document.querySelector('#nav');
-menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open)});
-nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
-
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
-document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-
-const modal=document.querySelector('#posterModal');
-document.querySelector('#posterBtn').addEventListener('click',()=>modal.showModal());
-document.querySelector('.modal-close').addEventListener('click',()=>modal.close());
-modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});
-
-const toast=document.querySelector('.toast');
-document.querySelectorAll('.fake-action').forEach(btn=>btn.addEventListener('click',()=>{toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)}));
+const menuBtn=document.querySelector('.menu-btn');const nav=document.querySelector('.nav');menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open)});document.querySelectorAll('.nav a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const form=document.getElementById('appraisalForm');const result=document.getElementById('result');form.addEventListener('submit',e=>{e.preventDefault();const data=new FormData(form);const car=data.get('car');const condition=data.get('condition');const prices={'通常走行可能':'385万円','事故車':'210万円','廃車・不動車':'88万円','残クレ中':'330万円'};result.hidden=false;result.innerHTML=`党首査定：<strong>${car}</strong>（${condition}）は、なんと <span style="font-size:1.45em">${prices[condition]}</span>！<br><small style="color:#a99b86">※演出用の架空査定です。実際の査定額ではありません。</small>`;result.scrollIntoView({behavior:'smooth',block:'center'})});
