@@ -1,50 +1,15 @@
-const terminal = document.getElementById('terminalText');
-const lines = [
-  'SYSTEM CHECK...',
-  'ACCESS: CHECKING',
-  'STATUS: STANDBY',
-  'MAIL ROUTE: kaukau@mirai.re',
-  'REQUEST: WAITING',
-  'SCREEN: PROP_MODE'
-];
-let tick = 0;
-setInterval(() => {
-  tick = (tick + 1) % 4;
-  terminal.textContent = lines.join('\n') + '\n' + 'CHECKING' + '.'.repeat(tick);
-}, 850);
+const menuBtn=document.querySelector('.menu-btn');
+const nav=document.querySelector('#nav');
+menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',open)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
 
-function scrollToForm(){
-  document.getElementById('formArea').scrollIntoView({behavior:'smooth'});
-}
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)e.target.classList.add('visible')}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 
-function showPropModal(message){
-  document.getElementById('modalMessage').textContent = message;
-  document.getElementById('modal').classList.add('open');
-  document.getElementById('modal').setAttribute('aria-hidden','false');
-}
+const modal=document.querySelector('#posterModal');
+document.querySelector('#posterBtn').addEventListener('click',()=>modal.showModal());
+document.querySelector('.modal-close').addEventListener('click',()=>modal.close());
+modal.addEventListener('click',e=>{if(e.target===modal)modal.close()});
 
-function closeModal(){
-  document.getElementById('modal').classList.remove('open');
-  document.getElementById('modal').setAttribute('aria-hidden','true');
-}
-
-document.getElementById('modal').addEventListener('click', (event) => {
-  if(event.target.id === 'modal') closeModal();
-});
-
-function formatAmount(value){
-  const number = Number(value || 0);
-  if(!number) return '未入力';
-  return number.toLocaleString('ja-JP') + '円';
-}
-
-document.getElementById('propForm').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const amount = formatAmount(document.getElementById('amountInput').value);
-  const status = document.getElementById('statusBox');
-  status.querySelector('p').textContent = `審査中：希望額 ${amount} / 送信先 kaukau@mirai.re を確認中…`;
-  setTimeout(() => {
-    status.querySelector('p').textContent = `受付完了：希望額 ${amount} / 確認待ち`;
-    showPropModal(`仮申込を受け付けました。希望額：${amount} / 送信先：kaukau@mirai.re`);
-  }, 900);
-});
+const toast=document.querySelector('.toast');
+document.querySelectorAll('.fake-action').forEach(btn=>btn.addEventListener('click',()=>{toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2200)}));

@@ -3,96 +3,143 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>黒札ファイナンス｜FICTION PROP</title>
+  <meta name="theme-color" content="#110b02" />
+  <title>レイメイ党｜ドラマ用架空サイト</title>
+  <meta name="description" content="ドラマ・映像作品用の架空政党サイトです。実在の団体・制度とは関係ありません。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700;900&family=Noto+Serif+JP:wght@700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="noise"></div>
-  <div class="prop-ribbon">FICTION PROP</div>
+  <div class="prop-bar">ドラマ・映像作品用の架空サイトです｜実在の政党・制度・企業とは関係ありません</div>
 
-  <header class="hero compact-hero">
-    <nav class="nav">
-      <div class="brand">
-        <span class="logo">黒</span>
-        <div>
-          <strong>黒札ファイナンス</strong>
-          <small>KUROFUDA FINANCE</small>
-        </div>
-      </div>
-      <button class="nav-cta" onclick="scrollToForm()">仮申込</button>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="レイメイ党トップ">
+      <span class="brand-mark">R</span>
+      <span><b>レイメイ党</b><small>REIMEI PARTY</small></span>
+    </a>
+    <button class="menu-btn" aria-expanded="false" aria-controls="nav">MENU</button>
+    <nav id="nav">
+      <a href="#policy">公約</a>
+      <a href="#cars">車買取</a>
+      <a href="#bath">お風呂制度</a>
+      <a href="#about">党について</a>
     </nav>
-
-    <section class="hero-inner">
-      <div class="copy">
-        <p class="eyebrow">MIDNIGHT CASH SERVICE</p>
-        <h1>すぐ欲しい。<br><span>今すぐ、動く。</span></h1>
-        <div class="hero-actions">
-          <button class="primary" onclick="scrollToForm()">30秒診断</button>
-          <button class="ghost" onclick="showPropModal('現在アクセスが集中しています。')">状況確認</button>
-        </div>
-      </div>
-
-      <div class="terminal-card">
-        <div class="terminal-top"><span></span><span></span><span></span></div>
-        <pre id="terminalText">SYSTEM CHECK...
-ACCESS: CHECKING
-STATUS: STANDBY
-MAIL ROUTE: kaukau@mirai.re</pre>
-      </div>
-    </section>
   </header>
 
-  <main>
-    <section class="application" id="formArea">
-      <div class="section-head clean-head">
-        <p class="eyebrow">APPLICATION</p>
-        <h2>仮申込フォーム</h2>
-        <div class="mail-destination">送信先：<strong>kaukau@mirai.re</strong></div>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">架空政党・ドラマ用特設サイト</p>
+        <h1>レイメイ党</h1>
+        <p class="catch">日本をもっと楽しく、もっと豊かに。</p>
+        <p class="lead">廃車・事故車・残クレ車も高価買取。さらに、お風呂のお店の利用料金をレイメイが30％負担する、という設定の風刺系キャンペーンサイトです。</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#policy">公約を見る</a>
+          <button class="btn ghost" id="posterBtn">ポスターを拡大</button>
+        </div>
       </div>
+      <figure class="poster-card reveal">
+        <img src="assets/poster.png" alt="レイメイ党のドラマ用選挙ポスター" />
+        <figcaption>※画像・人物・政策はすべてフィクションです</figcaption>
+      </figure>
+    </section>
 
-      <form id="propForm" autocomplete="off">
-        <label>お名前
-          <input type="text" placeholder="例：山田 太郎" />
-        </label>
-        <label>希望額
-          <div class="amount-field">
-            <input id="amountInput" type="number" min="0" step="10000" inputmode="numeric" placeholder="例：300000" />
-            <span>円</span>
-          </div>
-          <small class="form-note">金額は自由に入力できます</small>
-        </label>
-        <label>連絡先
-          <input type="text" placeholder="000-0000-0000" />
-        </label>
-        <label>現在の状況
-          <select>
-            <option>急ぎで相談したい</option>
-            <option>本日中に確認したい</option>
-            <option>条件だけ見たい</option>
-          </select>
-        </label>
-        <button class="submit" type="submit">審査開始</button>
-      </form>
+    <section class="ticker" aria-label="主要メッセージ">
+      <div>廃車も事故車もそのまま査定</div><div>残クレ中の車も相談可能</div><div>お風呂のお店30％負担制度</div><div>ドラマ用フィクション</div>
+    </section>
 
-      <div class="status-box" id="statusBox">
-        <span class="pulse"></span>
-        <p>待機中</p>
+    <section id="policy" class="section">
+      <div class="section-heading reveal">
+        <span>POLICY</span>
+        <h2>レイメイ党の三大公約</h2>
+        <p>物語上の演出として制作した、誇張表現を含む架空の政策です。</p>
+      </div>
+      <div class="policy-grid">
+        <article class="policy-card reveal">
+          <span class="num">01</span>
+          <h3>廃車・事故車<br>高価買取</h3>
+          <p>動かない車、傷や故障のある車、事故に遭ったアルファードもそのまま査定するという設定。</p>
+        </article>
+        <article class="policy-card reveal">
+          <span class="num">02</span>
+          <h3>残クレ車も<br>高価買取</h3>
+          <p>残価設定ローン中の車も、状況を確認して買取相談を受け付けるという架空サービス。</p>
+        </article>
+        <article class="policy-card reveal">
+          <span class="num">03</span>
+          <h3>お風呂料金<br>30％負担</h3>
+          <p>対象のお風呂のお店の料金をレイメイが30％負担するという、作品内限定の制度。</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="cars" class="split-section">
+      <div class="split-copy reveal">
+        <span class="kicker">CAR PURCHASE</span>
+        <h2>どんな車でも、まずは相談。</h2>
+        <p>廃車、事故車、長期間放置した車、ローン中・残クレ中の車など、幅広い状態を想定したドラマ用の買取ページです。</p>
+        <ul>
+          <li>事故車・不動車も査定対象という設定</li>
+          <li>残クレ・ローン中は契約状況を確認</li>
+          <li>査定料・相談料は無料という設定</li>
+        </ul>
+        <button class="btn primary fake-action">無料査定を申し込む</button>
+      </div>
+      <div class="visual-panel cars reveal">
+        <div class="badge">高価買取</div>
+        <div class="car-silhouette">🚙</div>
+        <strong>ALPHARD<br>ACCIDENT OK</strong>
+      </div>
+    </section>
+
+    <section id="bath" class="split-section reverse">
+      <div class="split-copy reveal">
+        <span class="kicker">BATH SUPPORT</span>
+        <h2>お風呂のお店、料金30％を負担。</h2>
+        <p>日常をもっと楽しくするという名目で導入された、劇中の架空制度です。実際の割引や補助を行うものではありません。</p>
+        <div class="price-box">
+          <span>レイメイ負担</span>
+          <b>30%</b>
+          <small>※ドラマ内設定</small>
+        </div>
+      </div>
+      <div class="visual-panel bath reveal">
+        <div class="steam">♨</div>
+        <strong>湯けむり<br>サポート制度</strong>
+      </div>
+    </section>
+
+    <section class="warning-section reveal">
+      <span class="label">劇中設定</span>
+      <h2>未納で支払っていない人への処分</h2>
+      <p>ポスター内の「禁錮三年、その後お風呂屋さんのスタッフへ」という表現は、ブラックコメディとしての架空設定です。現実の法律・刑罰・雇用制度を示すものではありません。</p>
+    </section>
+
+    <section id="about" class="about section">
+      <div class="section-heading reveal">
+        <span>ABOUT</span>
+        <h2>レイメイ党について</h2>
+      </div>
+      <div class="about-grid reveal">
+        <p>レイメイ党は、ドラマ、短編映像、コメディ作品などの小道具として制作された架空の政治団体です。実在する政党、行政機関、自動車買取業者、温浴施設とは一切関係ありません。</p>
+        <blockquote>「国家予算はレイメイ党のもの。笑笑」<cite>— 劇中キャッチコピー</cite></blockquote>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>黒札ファイナンス / FICTION PROP SITE</p>
+    <div><b>レイメイ党</b><span>DRAMA PROP WEBSITE</span></div>
+    <p>© 2026 REIMEI PARTY — FICTIONAL PROP ONLY</p>
   </footer>
 
-  <div class="modal" id="modal" aria-hidden="true">
-    <div class="modal-box">
-      <h3>CHECKING</h3>
-      <p id="modalMessage">受付処理中です。</p>
-      <button onclick="closeModal()">閉じる</button>
-    </div>
-  </div>
+  <dialog id="posterModal">
+    <button class="modal-close" aria-label="閉じる">×</button>
+    <img src="assets/poster.png" alt="レイメイ党ポスター拡大表示" />
+  </dialog>
 
+  <div class="toast" role="status">これはドラマ用のダミーボタンです</div>
   <script src="script.js"></script>
 </body>
 </html>
