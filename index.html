@@ -173,6 +173,899 @@ html,body{max-width:100%;overflow-x:hidden!important;}
   }
 }
 
+
+
+/* =====================================
+   PC・スマホ両対応 読みやすさ最終調整
+   ===================================== */
+html,body{
+  max-width:100%;
+  overflow-x:hidden!important;
+}
+img,video{
+  max-width:100%;
+  height:auto;
+}
+.container{
+  width:min(1180px,calc(100% - 48px))!important;
+  margin-inline:auto!important;
+}
+.header{
+  background:rgba(255,255,255,.97)!important;
+  backdrop-filter:blur(10px)!important;
+  border-bottom:1px solid rgba(26,33,29,.08)!important;
+}
+.header-inner{
+  min-height:86px!important;
+  gap:24px!important;
+}
+.brand{min-width:0!important;}
+.site-logo{
+  width:auto!important;
+  height:auto!important;
+  max-height:56px!important;
+  max-width:260px!important;
+  object-fit:contain!important;
+  display:block!important;
+}
+.nav{
+  display:flex!important;
+  align-items:center!important;
+  gap:12px!important;
+  font-size:13px!important;
+  min-width:0!important;
+}
+.nav a:not(.nav-button){
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:42px!important;
+  padding:0 14px!important;
+  border-radius:999px!important;
+  white-space:nowrap!important;
+  border:1px solid transparent!important;
+}
+.nav a:not(.nav-button):hover{
+  background:rgba(19,59,47,.08)!important;
+  border-color:rgba(19,59,47,.14)!important;
+  color:var(--main)!important;
+}
+.nav a.active:not(.nav-button){
+  background:var(--main-dark)!important;
+  border-color:var(--main-dark)!important;
+  color:#fff!important;
+  box-shadow:0 10px 24px rgba(19,59,47,.16)!important;
+}
+.nav-button{
+  min-height:48px!important;
+  padding:0 22px!important;
+  font-size:14px!important;
+  font-weight:950!important;
+  border-radius:999px!important;
+}
+.hero,.page-hero{
+  min-height:92vh!important;
+  padding-top:138px!important;
+  padding-bottom:76px!important;
+}
+.hero-layout,.page-hero-layout{
+  grid-template-columns:minmax(0,1fr) minmax(0,.94fr)!important;
+  gap:52px!important;
+  align-items:center!important;
+}
+h1{
+  font-size:clamp(36px,4.8vw,62px)!important;
+  line-height:1.16!important;
+}
+.lead{
+  font-size:15.5px!important;
+  line-height:1.95!important;
+}
+.hero-photo-card img,.image-main img{
+  width:100%!important;
+  height:430px!important;
+  object-fit:cover!important;
+}
+.hero-mini-grid{
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:12px!important;
+}
+.hero-mini{
+  min-height:108px!important;
+}
+section{
+  padding:88px 0!important;
+}
+.section-head{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) minmax(0,.9fr)!important;
+  gap:34px!important;
+  align-items:end!important;
+}
+.section-title{
+  font-size:clamp(30px,4vw,50px)!important;
+  line-height:1.3!important;
+}
+.section-text{
+  font-size:15px!important;
+  line-height:1.95!important;
+}
+.message-layout,.strength-main,.company-grid,.contact-box{
+  gap:36px!important;
+}
+.service-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:22px!important;
+}
+.detail-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:20px!important;
+}
+.flow-list{
+  display:grid!important;
+  grid-template-columns:repeat(4,minmax(0,1fr))!important;
+  gap:18px!important;
+}
+.service-card,.detail-card,.flow-step,.strength-card,.notice-box,.message-logo,.company-title,.company-table,.contact-form{
+  border-radius:20px!important;
+}
+.service-card img{
+  height:200px!important;
+  width:100%!important;
+  object-fit:cover!important;
+}
+.service-body,.detail-card,.flow-step,.strength-card,.contact-form,.message-logo,.company-title,.notice-box{
+  padding:24px!important;
+}
+.service-body h3,.detail-card h3,.flow-step h3,.strength-card h3{
+  font-size:24px!important;
+  line-height:1.42!important;
+}
+.service-body p,.detail-card p,.flow-step p,.strength-card p,.notice-box p,.message-text p{
+  font-size:14px!important;
+  line-height:1.9!important;
+}
+.topics-box{
+  grid-template-columns:220px 1fr auto!important;
+}
+.cta .container{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:24px!important;
+}
+.contact{
+  padding:104px 0!important;
+}
+.contact .section-title{
+  font-size:clamp(34px,4.3vw,56px)!important;
+  line-height:1.24!important;
+}
+.contact-form{
+  padding:30px!important;
+  gap:16px!important;
+}
+.form-row{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:14px!important;
+}
+.form-field{
+  gap:8px!important;
+}
+.form-field input,.form-field select,.form-field textarea{
+  width:100%!important;
+  min-height:50px!important;
+  padding:14px 16px!important;
+  font-size:15px!important;
+  border-radius:16px!important;
+}
+.form-field textarea{
+  min-height:160px!important;
+}
+.form-submit{
+  min-height:56px!important;
+  font-size:15px!important;
+}
+.mobile-contact-bar{display:none!important;}
+
+@media (max-width: 1100px){
+  .container{width:min(100% - 38px,1180px)!important;}
+  .hero-layout,.page-hero-layout{gap:36px!important;}
+  .service-grid,.detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .flow-list{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .hero-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+}
+
+@media (max-width: 900px){
+  .container{width:min(100% - 34px,1180px)!important;}
+  .header-inner{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    min-height:auto!important;
+    gap:10px!important;
+    padding:10px 0 11px!important;
+  }
+  .site-logo{max-width:195px!important;max-height:48px!important;}
+  .nav{
+    width:100%!important;
+    justify-content:flex-start!important;
+    gap:8px!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    padding:2px 0 4px!important;
+    scrollbar-width:none!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  .nav::-webkit-scrollbar{display:none!important;}
+  .nav a:not(.nav-button){
+    flex:0 0 auto!important;
+    min-height:40px!important;
+    padding:0 12px!important;
+    background:#fff!important;
+    border-color:var(--line)!important;
+  }
+  .nav-button{
+    flex:0 0 auto!important;
+    min-height:42px!important;
+    padding:0 16px!important;
+  }
+  .hero,.page-hero{
+    min-height:auto!important;
+    padding-top:152px!important;
+    padding-bottom:56px!important;
+  }
+  .hero-layout,.page-hero-layout,
+  .section-head,.message-layout,.strength-main,.company-grid,.contact-box{
+    grid-template-columns:1fr!important;
+    gap:26px!important;
+  }
+  .strength-copy{position:static!important;}
+  .hero-photo-card img,.image-main img{height:300px!important;}
+  .topics-box{grid-template-columns:1fr!important;}
+  .cta .container{display:grid!important;gap:18px!important;}
+}
+
+@media (max-width: 640px){
+  .container{width:min(100% - 28px,1180px)!important;}
+  .site-logo{max-width:176px!important;max-height:44px!important;}
+  .nav a:not(.nav-button){
+    min-height:38px!important;
+    padding:0 11px!important;
+    font-size:11.5px!important;
+  }
+  .nav-button{
+    min-height:40px!important;
+    padding:0 14px!important;
+    font-size:13px!important;
+  }
+  .hero,.page-hero{
+    padding-top:148px!important;
+    padding-bottom:44px!important;
+  }
+  h1{
+    font-size:clamp(29px,8.3vw,38px)!important;
+    line-height:1.22!important;
+  }
+  .lead{
+    font-size:14.5px!important;
+    line-height:1.9!important;
+    margin-bottom:24px!important;
+  }
+  .section-title,.cta h2,.contact .section-title{
+    font-size:clamp(27px,7.1vw,36px)!important;
+    line-height:1.34!important;
+  }
+  section{padding:58px 0!important;}
+  .hero-actions{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+  .hero-actions .btn,.cta .btn{width:100%!important;}
+  .hero-photo-card img,.image-main img{height:230px!important;}
+  .hero-mini-grid,.service-grid,.detail-grid,.flow-list{
+    grid-template-columns:1fr!important;
+  }
+  .service-card img{height:176px!important;}
+  .service-body,.detail-card,.flow-step,.strength-card,.contact-form,.message-logo,.company-title,.notice-box{
+    padding:22px!important;
+  }
+  .service-body h3,.detail-card h3,.flow-step h3,.strength-card h3{
+    font-size:22px!important;
+  }
+  .strength-card{
+    grid-template-columns:52px 1fr!important;
+    gap:14px!important;
+  }
+  .row{grid-template-columns:1fr!important;}
+  .row dt{padding:12px 16px!important;}
+  .row dd{padding:14px 16px 18px!important;}
+  .contact{padding:74px 0!important;}
+  .contact-form{padding:24px!important;}
+  .form-row{grid-template-columns:1fr!important;}
+  .form-field input,.form-field select,.form-field textarea{
+    font-size:16px!important; /* iPhoneズーム防止 */
+  }
+  .form-submit{min-height:54px!important;}
+  .mobile-contact-bar{
+    display:grid!important;
+    grid-template-columns:1fr 1fr!important;
+    gap:10px!important;
+    position:fixed!important;
+    left:12px!important;
+    right:12px!important;
+    bottom:12px!important;
+    z-index:80!important;
+  }
+  .mobile-contact-bar a{
+    min-height:48px!important;
+    display:grid!important;
+    place-items:center!important;
+    border-radius:999px!important;
+    color:#fff!important;
+    font-size:13.5px!important;
+    font-weight:950!important;
+    box-shadow:0 12px 28px rgba(15,23,42,.22)!important;
+  }
+  .mobile-contact-bar a:first-child{background:var(--main)!important;}
+  .mobile-contact-bar a:last-child{background:var(--main-dark)!important;}
+  footer{padding-bottom:92px!important;}
+}
+
+@media (max-width: 380px){
+  .container{width:min(100% - 22px,1180px)!important;}
+  .site-logo{max-width:160px!important;max-height:40px!important;}
+  h1{font-size:27px!important;}
+  .section-title,.cta h2,.contact .section-title{font-size:24px!important;}
+  .service-body,.detail-card,.flow-step,.strength-card,.contact-form,.message-logo,.company-title,.notice-box{
+    padding:18px!important;
+  }
+}
+
+
+
+/* =====================================
+   PC見やすさ強化調整
+   ===================================== */
+@media (min-width: 901px){
+  .container{
+    width:min(1240px, calc(100% - 96px))!important;
+  }
+  .header{
+    background:rgba(255,255,255,.98)!important;
+    border-bottom:1px solid rgba(26,33,29,.10)!important;
+    box-shadow:0 6px 24px rgba(15,20,18,.05)!important;
+  }
+  .header-inner{
+    min-height:92px!important;
+    gap:30px!important;
+    align-items:center!important;
+  }
+  .brand{
+    flex:0 0 auto!important;
+  }
+  .site-logo{
+    max-width:300px!important;
+    max-height:64px!important;
+  }
+  .nav{
+    flex:1 1 auto!important;
+    justify-content:flex-end!important;
+    gap:14px!important;
+    font-size:13px!important;
+  }
+  .nav a:not(.nav-button){
+    min-height:44px!important;
+    padding:0 16px!important;
+    background:rgba(255,255,255,.86)!important;
+    border:1px solid rgba(26,33,29,.08)!important;
+  }
+  .nav a:not(.nav-button):hover{
+    background:rgba(19,59,47,.08)!important;
+    border-color:rgba(19,59,47,.16)!important;
+  }
+  .nav a.active:not(.nav-button){
+    background:var(--main-dark)!important;
+    border-color:var(--main-dark)!important;
+    color:#fff!important;
+    box-shadow:0 10px 24px rgba(19,59,47,.14)!important;
+  }
+  .nav-button{
+    min-height:50px!important;
+    padding:0 24px!important;
+    font-size:14px!important;
+    box-shadow:0 12px 30px rgba(19,59,47,.16)!important;
+  }
+  .hero,.page-hero{
+    min-height:94vh!important;
+    padding-top:152px!important;
+    padding-bottom:92px!important;
+  }
+  .hero-layout,.page-hero-layout{
+    grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr)!important;
+    gap:58px!important;
+    align-items:center!important;
+  }
+  .hero-photo-card img,.image-main img{
+    height:460px!important;
+  }
+  h1{
+    font-size:clamp(40px,4.5vw,66px)!important;
+    line-height:1.14!important;
+  }
+  .lead{
+    max-width:760px!important;
+    font-size:16px!important;
+    line-height:2!important;
+  }
+  section{
+    padding:96px 0!important;
+  }
+  .section-head{
+    grid-template-columns:minmax(0,1fr) minmax(0,.92fr)!important;
+    gap:42px!important;
+    margin-bottom:40px!important;
+  }
+  .section-title{
+    font-size:clamp(32px,3.5vw,54px)!important;
+    line-height:1.25!important;
+  }
+  .section-text{
+    font-size:15px!important;
+    line-height:2!important;
+  }
+  .topics-box{
+    grid-template-columns:240px 1fr auto!important;
+    gap:24px!important;
+    padding:24px 32px!important;
+  }
+  .message-layout{
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;
+    gap:50px!important;
+    align-items:center!important;
+  }
+  .strength-main{
+    grid-template-columns:minmax(0,.88fr) minmax(0,1.12fr)!important;
+    gap:40px!important;
+  }
+  .company-grid{
+    grid-template-columns:minmax(0,.82fr) minmax(0,1.18fr)!important;
+    gap:34px!important;
+  }
+  .contact-box{
+    grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr)!important;
+    gap:40px!important;
+    align-items:center!important;
+  }
+  .service-grid{
+    grid-template-columns:repeat(3, minmax(0,1fr))!important;
+    gap:24px!important;
+  }
+  .detail-grid{
+    grid-template-columns:repeat(3, minmax(0,1fr))!important;
+    gap:22px!important;
+  }
+  .flow-list{
+    grid-template-columns:repeat(4, minmax(0,1fr))!important;
+    gap:20px!important;
+  }
+  .service-card,.detail-card,.flow-step,.strength-card,.notice-box,.message-logo,.company-title,.company-table,.contact-form{
+    border-radius:22px!important;
+  }
+  .service-card img{
+    height:210px!important;
+  }
+  .service-body,.detail-card,.flow-step,.strength-card,.message-logo,.company-title,.notice-box{
+    padding:26px!important;
+  }
+  .contact-form{
+    padding:30px!important;
+  }
+  .cta .container{
+    gap:28px!important;
+  }
+}
+
+@media (min-width: 1200px){
+  .container{
+    width:min(1280px, calc(100% - 120px))!important;
+  }
+  .nav{
+    gap:16px!important;
+  }
+  .service-grid{
+    gap:26px!important;
+  }
+}
+
+
+
+/* =====================================
+   文字被り・はみ出し徹底修正版
+   ===================================== */
+
+/* 全体のはみ出し防止 */
+*{
+  min-width:0!important;
+}
+html,body{
+  width:100%!important;
+  max-width:100%!important;
+  overflow-x:hidden!important;
+}
+body{
+  word-break:normal!important;
+  overflow-wrap:anywhere!important;
+}
+img,video,svg{
+  max-width:100%!important;
+  height:auto;
+}
+
+/* 見出し・本文の重なり防止 */
+h1,h2,h3,h4,p,li,dt,dd,a,span,strong,label,button,input,select,textarea{
+  max-width:100%!important;
+}
+h1,.section-title,.lead,.section-text,.message-text p,.service-body p,.detail-card p,.flow-step p,.strength-card p,.notice-box p,.topic-text{
+  overflow-wrap:anywhere!important;
+  word-break:auto-phrase!important;
+}
+.heading-line,.phrase{
+  display:inline!important;
+  white-space:normal!important;
+  overflow-wrap:anywhere!important;
+}
+
+/* PCヘッダーの被り防止 */
+.header-inner{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:space-between!important;
+  gap:22px!important;
+}
+.brand{
+  flex:0 0 auto!important;
+  max-width:300px!important;
+}
+.site-logo{
+  max-width:260px!important;
+  max-height:58px!important;
+  width:auto!important;
+  height:auto!important;
+  object-fit:contain!important;
+}
+.nav{
+  flex:1 1 auto!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-end!important;
+  gap:8px!important;
+  min-width:0!important;
+}
+.nav a{
+  white-space:nowrap!important;
+  flex:0 0 auto!important;
+}
+.nav a:not(.nav-button){
+  min-height:40px!important;
+  padding:0 12px!important;
+  font-size:clamp(11px,.86vw,13px)!important;
+}
+.nav-button{
+  min-height:46px!important;
+  padding:0 18px!important;
+  font-size:clamp(12px,.9vw,14px)!important;
+}
+
+/* ヒーロー周りの重なり防止 */
+.hero,.page-hero{
+  overflow:hidden!important;
+}
+.hero-layout,.page-hero-layout{
+  min-width:0!important;
+}
+.hero-layout > *, .page-hero-layout > *{
+  min-width:0!important;
+}
+.hero-content,.page-hero-content{
+  min-width:0!important;
+}
+h1{
+  font-size:clamp(34px,4.4vw,60px)!important;
+  line-height:1.22!important;
+  letter-spacing:-.025em!important;
+  margin-bottom:22px!important;
+}
+.lead{
+  font-size:clamp(14px,1.15vw,16px)!important;
+  line-height:1.95!important;
+}
+
+/* グリッドの安全化 */
+.service-grid,.detail-grid,.flow-list,.hero-mini-grid,.quick-points{
+  min-width:0!important;
+}
+.service-card,.detail-card,.flow-step,.strength-card,.hero-mini,.quick-point,.topics-box,.company-table,.contact-form{
+  min-width:0!important;
+  overflow:hidden!important;
+}
+.service-body{
+  min-width:0!important;
+}
+.service-body h3,.detail-card h3,.flow-step h3,.strength-card h3{
+  font-size:clamp(20px,1.65vw,24px)!important;
+  line-height:1.45!important;
+  letter-spacing:-.015em!important;
+  overflow-wrap:anywhere!important;
+}
+.service-body p,.detail-card p,.flow-step p,.strength-card p,.notice-box p,.message-text p{
+  line-height:1.9!important;
+}
+
+/* 会社概要テーブルの被り防止 */
+.row{
+  min-width:0!important;
+}
+.row dt,.row dd{
+  min-width:0!important;
+  overflow-wrap:anywhere!important;
+  line-height:1.85!important;
+}
+
+/* 問い合わせフォームの被り防止 */
+.form-row{
+  min-width:0!important;
+}
+.form-field{
+  min-width:0!important;
+}
+.form-field input,.form-field select,.form-field textarea{
+  min-width:0!important;
+  max-width:100%!important;
+}
+
+/* PCでメニューが詰まる幅の調整 */
+@media (max-width: 1220px) and (min-width: 901px){
+  .container{
+    width:min(1180px,calc(100% - 56px))!important;
+  }
+  .header-inner{
+    gap:16px!important;
+  }
+  .brand{
+    max-width:230px!important;
+  }
+  .site-logo{
+    max-width:220px!important;
+    max-height:52px!important;
+  }
+  .nav{
+    gap:6px!important;
+  }
+  .nav a:not(.nav-button){
+    padding:0 9px!important;
+    font-size:11.5px!important;
+  }
+  .nav-button{
+    padding:0 14px!important;
+    font-size:12px!important;
+  }
+}
+
+/* タブレット以下はヘッダーを2段にして被りを防止 */
+@media (max-width: 900px){
+  .header-inner{
+    display:grid!important;
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+    padding:10px 0 11px!important;
+  }
+  .brand{
+    max-width:100%!important;
+  }
+  .site-logo{
+    max-width:190px!important;
+    max-height:48px!important;
+  }
+  .nav{
+    width:100%!important;
+    justify-content:flex-start!important;
+    overflow-x:auto!important;
+    overflow-y:hidden!important;
+    gap:8px!important;
+    padding:2px 0 5px!important;
+    scrollbar-width:none!important;
+    -webkit-overflow-scrolling:touch!important;
+  }
+  .nav::-webkit-scrollbar{
+    display:none!important;
+  }
+  .nav a{
+    flex:0 0 auto!important;
+  }
+  .nav a:not(.nav-button){
+    min-height:40px!important;
+    padding:0 12px!important;
+    font-size:12px!important;
+  }
+  .nav-button{
+    min-height:42px!important;
+    padding:0 16px!important;
+    font-size:13px!important;
+  }
+  .hero,.page-hero{
+    padding-top:156px!important;
+  }
+  .hero-layout,.page-hero-layout,.section-head,.message-layout,.strength-main,.company-grid,.contact-box{
+    grid-template-columns:1fr!important;
+  }
+}
+
+/* スマホの文字被り防止 */
+@media (max-width: 640px){
+  .container{
+    width:min(100% - 28px,1180px)!important;
+  }
+  .site-logo{
+    max-width:170px!important;
+    max-height:42px!important;
+  }
+  .nav a:not(.nav-button){
+    min-height:38px!important;
+    padding:0 10px!important;
+    font-size:11.5px!important;
+  }
+  .nav-button{
+    min-height:40px!important;
+    padding:0 13px!important;
+    font-size:12.5px!important;
+  }
+  .hero,.page-hero{
+    padding-top:148px!important;
+  }
+  h1{
+    font-size:clamp(27px,7.8vw,36px)!important;
+    line-height:1.28!important;
+    letter-spacing:-.01em!important;
+  }
+  .lead{
+    font-size:14.5px!important;
+    line-height:1.9!important;
+  }
+  .section-title,.cta h2,.contact .section-title{
+    font-size:clamp(25px,7vw,34px)!important;
+    line-height:1.35!important;
+    letter-spacing:-.01em!important;
+  }
+  .service-body h3,.detail-card h3,.flow-step h3,.strength-card h3{
+    font-size:21px!important;
+    line-height:1.48!important;
+  }
+  .topics-box{
+    gap:12px!important;
+  }
+  .topic-text{
+    display:block!important;
+    margin-top:8px!important;
+    line-height:1.8!important;
+  }
+  .row{
+    grid-template-columns:1fr!important;
+  }
+  .row dt,.row dd{
+    font-size:14px!important;
+    line-height:1.8!important;
+  }
+}
+
+/* 超小型スマホ */
+@media (max-width: 380px){
+  .container{
+    width:min(100% - 22px,1180px)!important;
+  }
+  .site-logo{
+    max-width:152px!important;
+  }
+  h1{
+    font-size:25px!important;
+    line-height:1.32!important;
+  }
+  .section-title,.cta h2,.contact .section-title{
+    font-size:23px!important;
+  }
+  .lead,.section-text,.message-text p,.service-body p,.detail-card p,.flow-step p,.strength-card p,.notice-box p{
+    font-size:13.5px!important;
+  }
+}
+
+
+
+/* =====================================
+   上部お問い合わせボタン位置ずれ修正
+   ===================================== */
+
+/* PC時：ナビ全体を中央揃え、問い合わせだけ下がらないよう固定 */
+.header-inner{
+  align-items:center!important;
+}
+.nav{
+  align-items:center!important;
+}
+.nav a,
+.nav-button{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  line-height:1!important;
+  box-sizing:border-box!important;
+  margin:0!important;
+  vertical-align:middle!important;
+}
+.nav a:not(.nav-button){
+  height:42px!important;
+  min-height:42px!important;
+  padding:0 12px!important;
+}
+.nav-button{
+  height:46px!important;
+  min-height:46px!important;
+  padding:0 18px!important;
+  align-self:center!important;
+  position:relative!important;
+  top:0!important;
+  transform:none!important;
+}
+
+/* PCでロゴとメニューの高さを揃える */
+@media (min-width:901px){
+  .header-inner{
+    display:flex!important;
+    align-items:center!important;
+  }
+  .brand{
+    display:flex!important;
+    align-items:center!important;
+  }
+  .nav{
+    display:flex!important;
+    align-items:center!important;
+  }
+}
+
+/* スマホ・タブレット時：横スクロールメニュー内でも高さを統一 */
+@media (max-width:900px){
+  .nav{
+    align-items:center!important;
+  }
+  .nav a:not(.nav-button),
+  .nav-button{
+    height:40px!important;
+    min-height:40px!important;
+    display:inline-flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    line-height:1!important;
+  }
+  .nav-button{
+    padding:0 15px!important;
+  }
+}
+
+@media (max-width:640px){
+  .nav a:not(.nav-button),
+  .nav-button{
+    height:38px!important;
+    min-height:38px!important;
+  }
+  .nav-button{
+    padding:0 13px!important;
+    font-size:12.5px!important;
+  }
+}
+
 </style>
 <link rel="icon" href="favicon.png">
 </head>
