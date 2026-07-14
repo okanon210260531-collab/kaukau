@@ -1,0 +1,8 @@
+1. GitHubの「kaukau」リポジトリを開きます。
+2. 古いサイトのファイルを削除します。
+3. このフォルダ内の index.html、style.css、script.js、.nojekyll、assets フォルダをアップロードします。
+4. Commit changes を押します。
+5. Settings → Pages で「Deploy from a branch」「main」「/(root)」を選びます。
+6. 数分待ってから公開ページを再読み込みします。
+
+重要：NABEX-GitHub-Pagesフォルダ自体ではなく、その中身をリポジトリの一番上へ置いてください。
