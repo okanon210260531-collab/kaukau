@@ -8,180 +8,169 @@
   <style>
 
 :root{
-  --main:#133b2f;
-  --main-2:#1b5a45;
-  --accent:#c8a86a;
-  --accent-soft:#efe4cf;
-  --bg:#f7f4ee;
-  --bg-soft:#f2eee7;
-  --text:#1a211d;
-  --muted:#6a726d;
-  --line:#e2dbcf;
-  --white:#ffffff;
-  --shadow:0 16px 40px rgba(15,20,18,.07);
+  --black:#020617;--navy:#07182f;--blue:#0b5cff;--cyan:#06b6d4;--sky:#eaf4ff;--white:#fff;--text:#111827;--muted:#64748b;--line:#dbe7f5;--bg:#f7fbff;--shadow:0 22px 60px rgba(15,23,42,.12);--radius:34px 8px 34px 8px;
 }
-*{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth}
-body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;background:var(--bg);color:var(--text);line-height:1.88;overflow-x:hidden;-webkit-text-size-adjust:100%}
-a{color:inherit;text-decoration:none}
-img{display:block;max-width:100%}
-.container{width:min(1180px,calc(100% - 44px));margin:0 auto}
+*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif;color:var(--text);background:var(--bg);line-height:1.85;overflow-x:hidden;-webkit-text-size-adjust:100%}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}.container{width:min(1180px,calc(100% - 40px));margin:0 auto}.sp-only{display:none}
+.header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.92);backdrop-filter:blur(18px);border-bottom:1px solid rgba(219,231,245,.9)}.header-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{display:flex;align-items:center}.site-logo{height:58px;width:auto;object-fit:contain}.nav{display:flex;align-items:center;gap:16px;font-size:13px;font-weight:900;color:#334155}.nav a{white-space:nowrap}.nav a:hover,.nav a.active{color:var(--blue)}.nav-button{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff!important;padding:10px 16px;border-radius:999px;box-shadow:0 12px 28px rgba(11,92,255,.24)}
+.hero,.page-hero{min-height:100vh;display:grid;align-items:center;position:relative;overflow:hidden;padding:125px 0 80px;background:linear-gradient(90deg,rgba(2,6,23,.9) 0%,rgba(7,24,47,.74) 48%,rgba(11,92,255,.34) 100%),radial-gradient(circle at 82% 20%,rgba(6,182,212,.28),transparent 30%),linear-gradient(135deg,#020617 0%,#0f172a 52%,#0b5cff 100%);color:#fff}.hero:before,.page-hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.055) 1px,transparent 1px);background-size:64px 64px;opacity:.72;mask-image:linear-gradient(to bottom,rgba(0,0,0,1),transparent 96%)}.hero:after,.page-hero:after{content:"NABEX";position:absolute;right:-38px;bottom:-38px;font-size:clamp(88px,21vw,280px);line-height:.8;font-weight:950;letter-spacing:-.09em;color:rgba(255,255,255,.055);pointer-events:none}.hero-layout,.page-hero-layout{position:relative;z-index:1;display:grid;grid-template-columns:1.02fr .98fr;gap:48px;align-items:center}.kicker{display:inline-flex;align-items:center;gap:10px;padding:9px 15px;border:1px solid rgba(255,255,255,.26);background:rgba(255,255,255,.1);border-radius:999px;font-size:13px;font-weight:950;margin-bottom:22px}.kicker:before{content:"";width:9px;height:9px;background:var(--cyan);border-radius:50%;box-shadow:0 0 24px rgba(6,182,212,.95)}h1{font-size:clamp(42px,7.2vw,84px);line-height:1.05;letter-spacing:-.065em;margin-bottom:24px}.lead{max-width:760px;color:rgba(255,255,255,.86);font-size:17px;line-height:2;margin-bottom:34px}.hero-actions{display:flex;flex-wrap:wrap;gap:14px}.btn{min-height:54px;display:inline-flex;align-items:center;justify-content:center;padding:0 24px;border-radius:999px;font-weight:950;transition:.22s ease}.btn:hover{transform:translateY(-2px)}.btn-primary{background:#fff;color:var(--black)}.btn-blue{background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;box-shadow:0 18px 36px rgba(11,92,255,.28)}.hero-photo-card{border-radius:42px 42px 8px 42px;overflow:hidden;border:1px solid rgba(255,255,255,.18);box-shadow:0 28px 90px rgba(0,0,0,.32);background:rgba(255,255,255,.08)}.hero-photo-card img{width:100%;height:420px;object-fit:cover}.hero-mini-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-top:16px}.hero-mini{min-height:116px;padding:16px;border-radius:22px 22px 4px 22px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px)}.hero-mini strong{display:block;font-size:23px;line-height:1;margin-bottom:9px}.hero-mini span{display:block;color:rgba(255,255,255,.78);font-size:11.5px;font-weight:850;line-height:1.55}
+section{padding:96px 0}.section-head{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:end;margin-bottom:36px}.eyebrow{color:var(--blue);font-size:13px;font-weight:950;letter-spacing:.16em;margin-bottom:8px}.section-title{font-size:clamp(32px,5vw,62px);line-height:1.18;letter-spacing:-.06em;color:var(--black)}.section-text{color:var(--muted)}.topics{background:#fff;padding:34px 0;border-bottom:1px solid var(--line)}.topics-box{display:grid;grid-template-columns:220px 1fr auto;gap:22px;align-items:center;padding:26px 30px;border-radius:28px;background:var(--sky);border:1px solid var(--line)}.topics-title strong{display:block;font-size:28px;line-height:1;color:var(--black);letter-spacing:-.04em}.topics-title span{color:var(--blue);font-size:13px;font-weight:950}.topic-date{color:var(--blue);font-weight:950;margin-right:14px}.topic-text{font-weight:850;color:#334155}
+.message{background:#fff}.message-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}.message-logo{background:linear-gradient(135deg,#fff,#eaf4ff);border:1px solid var(--line);border-radius:var(--radius);padding:40px;box-shadow:var(--shadow)}.message-text p{color:#475569;margin-bottom:18px}.message-sign{margin-top:26px;padding-top:22px;border-top:1px solid var(--line);font-weight:950;color:var(--black)}
+.business{background:linear-gradient(180deg,#f7fbff 0%,#eef6ff 100%)}.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}.service-card{background:#fff;border:1px solid var(--line);border-radius:34px 8px 34px 8px;overflow:hidden;box-shadow:var(--shadow);display:flex;flex-direction:column;min-height:100%}.service-card img{height:205px;width:100%;object-fit:cover}.service-body{padding:28px;display:grid;gap:12px;flex:1}.service-no{color:var(--blue);font-weight:950;letter-spacing:.12em;font-size:13px}.service-body h3{font-size:26px;line-height:1.3;letter-spacing:-.045em;color:var(--black)}.service-body p{color:#475569;font-size:14px}.service-body ul{padding-left:20px;color:#334155;font-weight:700;font-size:13px}.link-more{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 16px;border-radius:999px;background:var(--black);color:#fff;font-weight:950;font-size:13px}
+.strength{background:#fff}.strength-main{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px;align-items:start}.strength-copy{position:sticky;top:112px}.strength-list{display:grid;gap:20px}.strength-card{display:grid;grid-template-columns:74px 1fr;gap:18px;padding:28px;border-radius:30px 6px 30px 6px;background:var(--sky);border:1px solid var(--line)}.strength-card strong{color:var(--blue);font-size:34px;line-height:1;font-weight:950}.strength-card h3{font-size:23px;letter-spacing:-.04em}.strength-card p{color:#475569}.company{background:linear-gradient(180deg,#eef6ff 0%,#fff 100%)}.company-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:34px;align-items:start}.company-title{padding:36px;border-radius:34px 6px 34px 6px;background:var(--black);color:#fff;box-shadow:var(--shadow)}.company-title .section-title{color:#fff}.company-title p{color:rgba(255,255,255,.72)}.company-table{overflow:hidden;border-radius:34px 6px 34px 6px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}.row{display:grid;grid-template-columns:190px 1fr;border-bottom:1px solid var(--line)}.row:last-child{border-bottom:none}.row dt{background:var(--sky);color:var(--black);font-weight:950;padding:18px 22px}.row dd{background:#fff;color:#334155;padding:18px 22px}
+.page-hero{min-height:88vh}.page-image-stack{display:grid;gap:16px}.image-main{border-radius:42px 42px 8px 42px;overflow:hidden;border:1px solid rgba(255,255,255,.18);box-shadow:0 28px 90px rgba(0,0,0,.32)}.image-main img{height:420px;width:100%;object-fit:cover}.quick-points{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.quick-point{padding:18px;border-radius:22px 22px 4px 22px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(14px)}.quick-point strong{display:block;font-size:18px}.quick-point span{font-size:12px;color:rgba(255,255,255,.75);font-weight:800}.detail{background:#fff}.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.detail-card{padding:28px;border-radius:30px 8px 30px 8px;background:var(--sky);border:1px solid var(--line)}.detail-card span{display:inline-flex;color:var(--blue);font-weight:950;letter-spacing:.12em;margin-bottom:8px}.detail-card h3{font-size:24px;letter-spacing:-.04em;line-height:1.35;margin-bottom:10px}.detail-card p,.detail-card li{color:#475569}.detail-card ul{padding-left:20px}.flow{background:linear-gradient(180deg,#eef6ff 0%,#fff 100%)}.flow-list{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}.flow-step{background:#fff;border:1px solid var(--line);border-radius:28px 6px 28px 6px;padding:26px;box-shadow:0 14px 38px rgba(15,23,42,.08)}.flow-step strong{display:grid;place-items:center;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;margin-bottom:14px}.flow-step h3{font-size:21px;margin-bottom:8px}.flow-step p{color:#475569;font-size:14px}.notice-box{margin-top:26px;padding:24px;border-radius:24px 6px 24px 6px;background:#fff;border:1px solid var(--line);box-shadow:0 12px 34px rgba(15,23,42,.08)}.notice-box strong{display:block;color:var(--black);font-size:18px;margin-bottom:8px}.notice-box p{color:#475569}.cta{background:linear-gradient(90deg,rgba(2,6,23,.92),rgba(7,24,47,.76)),linear-gradient(135deg,#020617,#0b5cff);color:#fff}.cta .container{display:flex;align-items:center;justify-content:space-between;gap:24px}.cta h2{font-size:clamp(30px,5vw,54px);line-height:1.2;letter-spacing:-.06em}.cta p{color:rgba(255,255,255,.74)}
+.contact{background:linear-gradient(90deg,rgba(2,6,23,.9),rgba(7,24,47,.72)),linear-gradient(135deg,#020617,#0b5cff);color:#fff}.contact-box{display:grid;grid-template-columns:.9fr 1.1fr;gap:34px;align-items:center}.contact .section-title{color:#fff}.contact p{color:rgba(255,255,255,.74)}.contact-form{display:grid;gap:14px;padding:26px;border-radius:28px 6px 28px 6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);backdrop-filter:blur(14px)}.form-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}.form-field{display:grid;gap:6px}.form-field label{color:rgba(255,255,255,.76);font-size:13px;font-weight:900}.form-field input,.form-field select,.form-field textarea{width:100%;border:1px solid rgba(255,255,255,.22);border-radius:14px;background:rgba(255,255,255,.92);color:var(--black);font:inherit;font-size:14px;padding:12px 14px;outline:none}.form-field textarea{min-height:126px;resize:vertical}.form-field input:focus,.form-field select:focus,.form-field textarea:focus{border-color:var(--cyan);box-shadow:0 0 0 4px rgba(6,182,212,.18)}.form-note{color:rgba(255,255,255,.62)!important;font-size:12px;line-height:1.7}.form-submit{border:0;cursor:pointer;min-height:52px;border-radius:999px;background:linear-gradient(135deg,var(--blue),var(--cyan));color:#fff;font:inherit;font-weight:950;box-shadow:0 18px 36px rgba(11,92,255,.26)}footer{background:#020617;color:rgba(255,255,255,.72);text-align:center;padding:30px 0;font-size:14px}.mobile-contact-bar{display:none}
+@media(max-width:1080px){.nav{gap:11px;font-size:12px}.site-logo{height:50px}.service-grid{grid-template-columns:repeat(2,1fr)}.hero-mini-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:900px){.nav{display:none}.hero-layout,.page-hero-layout,.section-head,.message-layout,.strength-main,.company-grid,.contact-box{grid-template-columns:1fr}.strength-copy{position:static}.detail-grid{grid-template-columns:1fr 1fr}.flow-list{grid-template-columns:1fr 1fr}.topics-box{grid-template-columns:1fr}.quick-points{grid-template-columns:1fr}.cta .container{display:grid}.mobile-contact-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:80}.mobile-contact-bar a{min-height:48px;display:grid;place-items:center;border-radius:999px;color:#fff;font-size:14px;font-weight:950;box-shadow:0 14px 34px rgba(15,23,42,.24)}.mobile-contact-bar a:first-child{background:linear-gradient(135deg,var(--blue),var(--cyan))}.mobile-contact-bar a:last-child{background:#020617}footer{padding-bottom:92px}}
+@media(max-width:560px){.sp-only{display:inline}.container{width:min(100% - 28px,1180px)}.header-inner{min-height:66px}.site-logo{height:44px}.hero,.page-hero{min-height:auto;padding:94px 0 48px}h1{font-size:clamp(34px,10.5vw,46px);line-height:1.14;margin-bottom:16px;letter-spacing:-.055em}.lead{font-size:14px;line-height:1.9;margin-bottom:22px}.hero-actions .btn{width:100%;min-height:50px}.hero-photo-card img,.image-main img{height:230px}.hero-mini-grid,.service-grid,.detail-grid,.flow-list{grid-template-columns:1fr}.hero-mini{min-height:auto;padding:16px}section{padding:54px 0}.section-title{font-size:clamp(28px,8.2vw,38px);line-height:1.28}.section-text,.message-text p,.service-body p,.detail-card p,.flow-step p,.company-title p,.contact p{font-size:14px;line-height:1.95}.service-card{border-radius:28px 6px 28px 6px}.service-card img{height:175px}.service-body{padding:22px}.service-body h3{font-size:23px}.strength-card{grid-template-columns:52px 1fr;padding:18px;border-radius:22px 6px 22px 6px;gap:14px}.strength-card strong{font-size:24px}.strength-card h3{font-size:19px}.row{grid-template-columns:1fr}.row dt{padding:12px 16px;font-size:14px}.row dd{padding:14px 16px 18px;font-size:14px}.form-row{grid-template-columns:1fr}.contact-form{padding:18px;border-radius:22px 6px 22px 6px}.form-field input,.form-field select,.form-field textarea{font-size:14px;padding:11px 12px}.form-field textarea{min-height:110px}.cta .btn{width:100%}.mobile-contact-bar{left:10px;right:10px;bottom:10px;gap:8px}.mobile-contact-bar a{min-height:46px;font-size:13px}}
 
-.header{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(255,255,255,.96);border-bottom:1px solid rgba(26,33,29,.08);backdrop-filter:blur(10px)}
-.header-inner{min-height:86px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.brand{display:flex;align-items:center;gap:12px;flex:0 0 auto}
-.site-logo{height:54px;width:auto;object-fit:contain;display:block}
-.nav{display:flex;align-items:center;gap:22px;font-size:12px;font-weight:900;color:#374151;letter-spacing:.08em}
-.nav a{white-space:nowrap;position:relative;padding:6px 0}
-.nav a:after{content:"";position:absolute;left:0;bottom:0;width:0;height:2px;background:var(--accent);transition:width .2s ease}
-.nav a:hover,.nav a.active{color:var(--main)}
-.nav a:hover:after,.nav a.active:after{width:100%}
-.nav-button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 24px;border-radius:999px;background:var(--main);color:#fff!important;box-shadow:0 12px 28px rgba(19,59,47,.16);font-size:14px;font-weight:950}
 
-.hero,.page-hero{position:relative;overflow:hidden;min-height:96vh;padding:138px 0 96px;background:linear-gradient(115deg,rgba(17,30,25,.96) 0%,rgba(19,59,47,.96) 48%,rgba(27,90,69,.92) 100%);color:#fff}
-.hero:before,.page-hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 84% 18%,rgba(200,168,106,.18),transparent 26%),linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);background-size:auto,78px 78px,78px 78px;opacity:.82}
-.hero:after,.page-hero:after{content:"";position:absolute;right:-100px;top:54px;width:470px;height:470px;border-radius:50%;background:radial-gradient(circle,rgba(200,168,106,.14),transparent 72%)}
-.hero-layout,.page-hero-layout{position:relative;z-index:1;display:grid;grid-template-columns:1fr .96fr;gap:56px;align-items:center}
-.kicker{display:inline-flex;align-items:center;gap:10px;padding:8px 16px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.09);font-size:12px;font-weight:900;letter-spacing:.12em;margin-bottom:24px}
-.kicker:before{content:"";width:9px;height:9px;border-radius:50%;background:var(--accent)}
-h1,.section-title,.service-body h3,.detail-card h3,.strength-card h3,.flow-step h3,.cta h2{font-family:Georgia,"Times New Roman",serif}
-h1{font-size:clamp(38px,5.4vw,72px);line-height:1.12;letter-spacing:-.04em;margin-bottom:20px}
-.lead{font-size:16px;line-height:2;color:rgba(255,255,255,.88);max-width:760px;margin-bottom:34px}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 24px;border-radius:999px;font-weight:900}
-.btn-primary{background:var(--accent);color:#18211d}
-.btn-blue{background:transparent;border:1px solid rgba(255,255,255,.24);color:#fff}
-.hero-photo-card,.image-main{overflow:hidden;border-radius:24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);box-shadow:0 28px 68px rgba(0,0,0,.24)}
-.hero-photo-card img,.image-main img{width:100%;height:440px;object-fit:cover}
-.hero-mini-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:16px}
-.hero-mini{padding:18px;border-radius:18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.12);min-height:112px;backdrop-filter:blur(8px)}
-.hero-mini strong{display:block;font-size:24px;line-height:1;margin-bottom:8px;color:var(--accent)}
-.hero-mini span{display:block;font-size:12px;line-height:1.65;font-weight:800;color:rgba(255,255,255,.84)}
-
-section{padding:96px 0}
-.contact{padding:118px 0}
-.heading-line,.phrase{display:inline!important;white-space:normal!important}
-.eyebrow{display:inline-flex;align-items:center;gap:10px;color:var(--accent);font-size:13px;font-weight:950;letter-spacing:.18em;margin-bottom:12px}
-.eyebrow:before{content:"";width:32px;height:2px;background:var(--accent)}
-.section-head{display:grid;grid-template-columns:1fr .95fr;align-items:end;gap:34px;margin-bottom:38px}
-.section-title{font-size:clamp(32px,4.4vw,54px);line-height:1.24;letter-spacing:-.04em;color:var(--text)}
-.section-text{color:var(--muted);font-size:15px;line-height:1.95}
-
-.topics{background:#fff;padding:30px 0;border-bottom:1px solid var(--line)}
-.topics-box{display:grid;grid-template-columns:220px 1fr auto;align-items:center;gap:22px;padding:24px 30px;border-radius:22px;background:linear-gradient(135deg,#fff,#fcfbf8);border:1px solid var(--line);box-shadow:var(--shadow)}
-.topics-title span{display:block;color:var(--accent);font-size:12px;font-weight:950;letter-spacing:.14em;margin-bottom:4px}
-.topics-title strong{display:block;font-family:Georgia,"Times New Roman",serif;font-size:28px;line-height:1;letter-spacing:-.03em}
-.topic-date{display:inline-flex;align-items:center;justify-content:center;min-width:60px;height:30px;padding:0 12px;border-radius:999px;background:var(--accent-soft);color:#6a4f1f;font-size:11px;font-weight:950;margin-right:12px}
-.topic-text{font-size:14px;font-weight:800;color:#334155}
-
-.message,.strength,.detail{background:#fff}
-.message-layout{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
-.message-logo,.detail-card,.flow-step,.strength-card,.service-card,.company-table,.notice-box{background:#fff;border:1px solid var(--line);box-shadow:var(--shadow)}
-.message-logo{padding:42px;border-radius:22px;background:linear-gradient(135deg,#fff,#fbf9f5)}
-.message-logo img{width:100%;height:auto;object-fit:contain;max-width:100%;display:block;}
-.message-text p{margin-bottom:16px;color:#475569}
-.message-sign{margin-top:26px;padding-top:20px;border-top:1px solid var(--line);font-weight:950;color:var(--main)}
-
-.business,.company,.flow{background:linear-gradient(180deg,#fbfaf7 0%,#f2eee7 100%)}
-.service-grid,.detail-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.service-card{overflow:hidden;border-radius:22px;display:flex;flex-direction:column;min-height:100%;transition:transform .2s ease, box-shadow .2s ease}
-.service-card:hover{transform:translateY(-4px);box-shadow:0 20px 52px rgba(15,20,18,.10)}
-.service-card img{width:100%;height:210px;object-fit:cover}
-.service-body{padding:26px;display:grid;gap:12px;flex:1}
-.service-no,.detail-card span{font-size:12px;font-weight:950;letter-spacing:.16em;color:#8e6a2b}
-.service-body h3,.detail-card h3,.strength-card h3,.flow-step h3{font-size:25px;line-height:1.38;letter-spacing:-.03em}
-.service-body p,.detail-card p,.strength-card p,.flow-step p,.notice-box p{font-size:14px;line-height:1.92;color:#475569}
-.service-body ul,.detail-card ul{padding-left:18px;color:#334155;font-weight:700;font-size:13px;line-height:1.85}
-.link-more{margin-top:auto;display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:999px;background:var(--main-dark);color:#fff;font-size:13px;font-weight:900}
-
-.strength-main{display:grid;grid-template-columns:.9fr 1.1fr;gap:42px}
-.strength-copy{position:sticky;top:118px}
-.strength-list{display:grid;gap:18px}
-.strength-card{display:grid;grid-template-columns:68px 1fr;gap:18px;padding:26px;border-radius:22px;background:linear-gradient(135deg,#fff,#fbfaf7)}
-.strength-card strong{font-family:Georgia,"Times New Roman",serif;font-size:32px;line-height:1;color:var(--accent)}
-
-.company-grid{display:grid;grid-template-columns:.82fr 1.18fr;gap:32px}
-.company-title{padding:34px;border-radius:24px;background:linear-gradient(135deg,#13231d,#184333);color:#fff;box-shadow:0 18px 50px rgba(19,59,47,.18)}
-.company-title .section-title{color:#fff}
-.company-title p{color:rgba(255,255,255,.82)}
-.company-table{overflow:hidden;border-radius:22px;background:#fff}
-.row{display:grid;grid-template-columns:180px 1fr;border-bottom:1px solid var(--line)}
-.row:last-child{border-bottom:none}
-.row dt{padding:18px 20px;background:#f5efe3;font-weight:950}
-.row dd{padding:18px 20px;background:#fff;color:#334155}
-
-.page-hero{min-height:82vh}
-.page-image-stack{display:grid;gap:14px}
-.quick-points{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.quick-point{padding:16px;border-radius:18px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.14)}
-.quick-point strong{display:block;font-size:16px;line-height:1.3;margin-bottom:6px;color:var(--accent)}
-.quick-point span{display:block;font-size:12px;font-weight:800;line-height:1.65;color:rgba(255,255,255,.84)}
-.detail-card{padding:26px;border-radius:22px;background:linear-gradient(135deg,#fff,#fbfaf7)}
-.flow-list{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.flow-step{padding:24px;border-radius:22px;background:linear-gradient(135deg,#fff,#fbfaf7)}
-.flow-step strong{display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--accent);color:#17211d;margin-bottom:14px;font-weight:950}
-.notice-box{margin-top:24px;padding:24px;border-radius:22px;background:linear-gradient(135deg,#fff,#fbfaf7)}
-
-.cta,.contact{background:linear-gradient(135deg,#15261f 0%,#173b2e 56%,#1d5844 100%);color:#fff}
-.cta .container{display:flex;align-items:center;justify-content:space-between;gap:24px}
-.cta h2{font-size:clamp(30px,4.3vw,48px);line-height:1.26;color:#fff}
-.cta p,.contact p{color:rgba(255,255,255,.84)}
-.contact .section-text{font-size:16px;line-height:2}
-.contact .section-title{color:#fff;font-size:clamp(34px,4.8vw,58px);line-height:1.22}
-.contact-box{display:grid;grid-template-columns:.86fr 1.14fr;gap:44px;align-items:center}
-.contact-form{display:grid;gap:16px;padding:32px;border-radius:24px;background:rgba(255,255,255,.10);border:1px solid rgba(255,255,255,.16);backdrop-filter:blur(10px)}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.form-field{display:grid;gap:8px}
-.form-field label{font-size:14px;font-weight:900;color:rgba(255,255,255,.88)}
-.form-field input,.form-field select,.form-field textarea{width:100%;padding:14px 16px;border:1px solid rgba(255,255,255,.18);border-radius:16px;background:#fff;color:var(--text);font:inherit;font-size:15px}
-.form-field textarea{min-height:164px;resize:vertical}
-.form-note{font-size:13px;line-height:1.8;color:rgba(255,255,255,.72)!important}
-.form-submit{min-height:58px;border-radius:999px;border:0;background:var(--accent);color:#17211d;font:inherit;font-size:15px;font-weight:950;cursor:pointer}
-
-footer{background:#121c18;color:rgba(255,255,255,.78);text-align:center;padding:30px 0;font-size:14px}
-.mobile-contact-bar{display:none}
-
-@media(max-width:1080px){
-  .nav{gap:14px}
-  .service-grid,.detail-grid{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:900px){
-  .contact{padding:92px 0}
-  .header-inner{display:grid;gap:8px;padding:10px 0;min-height:auto}
-  .nav{display:flex;width:100%;overflow-x:auto;gap:8px;padding-bottom:4px;scrollbar-width:none}
-  .nav::-webkit-scrollbar{display:none}
-  .nav a{flex:0 0 auto;padding:7px 12px;border-radius:999px;background:#fff;border:1px solid var(--line)}
-  .nav a.active{background:var(--main-dark);color:#fff!important}
-  .nav-button{background:var(--main)!important;color:#fff!important;border-color:transparent!important;min-height:46px;padding:0 20px}
-  .hero,.page-hero{padding-top:150px;min-height:auto}
-  .hero-layout,.page-hero-layout,.section-head,.message-layout,.strength-main,.company-grid,.contact-box{grid-template-columns:1fr}
-  .strength-copy{position:static}
-  .topics-box{grid-template-columns:1fr}
-  .quick-points{grid-template-columns:1fr}
-  .flow-list{grid-template-columns:1fr 1fr}
-  .cta .container{display:grid}
-  .mobile-contact-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:12px;right:12px;bottom:12px;z-index:80}
-  .mobile-contact-bar a{min-height:48px;display:grid;place-items:center;border-radius:999px;color:#fff;font-size:14px;font-weight:950;box-shadow:0 12px 28px rgba(15,23,42,.22)}
-  .mobile-contact-bar a:first-child{background:var(--accent);color:#17211d}
-  .mobile-contact-bar a:last-child{background:var(--main-dark)}
-  footer{padding-bottom:92px}
-}
+/* 見出しの不自然な自動改行を防ぐ設定 */
+h1,.section-title,.cta h2{word-break:keep-all;overflow-wrap:normal;line-break:strict;text-wrap:balance;}
+.heading-line{display:block;white-space:nowrap;}
+.keep{white-space:nowrap;}
 @media(max-width:560px){
-  .container{width:min(100% - 28px,1180px)}
-  section{padding:62px 0}
-  h1{font-size:clamp(31px,8vw,40px)}
-  .section-title{font-size:clamp(28px,7vw,36px)}
-  .lead{font-size:14.5px}
-  .hero-actions .btn{width:100%}
-  .hero-photo-card img,.image-main img{height:240px}
-  .hero-mini-grid,.service-grid,.detail-grid,.flow-list{grid-template-columns:1fr}
-  .service-card img{height:178px}
-  .service-body,.detail-card,.flow-step,.strength-card,.contact-form,.message-logo{padding:24px}
-  .strength-card{grid-template-columns:54px 1fr}
-  .row{grid-template-columns:1fr}
-  .row dt{padding:12px 16px}
-  .row dd{padding:14px 16px 18px}
-  .form-row{grid-template-columns:1fr}
+  h1{font-size:clamp(32px,8.8vw,42px);line-height:1.16;letter-spacing:-.035em;}
+  .section-title{font-size:clamp(27px,7.4vw,34px);line-height:1.25;letter-spacing:-.035em;}
+  .cta h2{font-size:clamp(28px,7.8vw,36px);line-height:1.25;letter-spacing:-.035em;}
+}
+@media(max-width:360px){
+  h1{font-size:30px;}
+  .section-title{font-size:26px;}
+  .cta h2{font-size:27px;}
+}
+
+
+/* ================================
+   NABEX スマホ最適化・最終調整
+   ================================ */
+html,body{max-width:100%;overflow-x:hidden!important;}
+:root{--main:#133b2f;--main-dark:#0f3f31;--accent:#c8a86a;--accent-soft:#efe4cf;}
+.header{background:rgba(255,255,255,.96)!important;backdrop-filter:blur(10px)!important;border-bottom:1px solid rgba(26,33,29,.08)!important;}
+.site-logo{height:54px!important;width:auto!important;max-width:220px!important;object-fit:contain!important;display:block!important;}
+.nav a:hover,.nav a.active{color:var(--main)!important;}
+.nav-button{background:var(--main)!important;color:#fff!important;min-height:48px!important;padding:0 24px!important;font-size:14px!important;font-weight:950!important;}
+.kicker:before{background:var(--accent)!important;box-shadow:none!important;}
+.eyebrow,.service-no,.detail-card span,.strength-card strong{color:#8e6a2b!important;}
+.btn-blue,.form-submit,.flow-step strong{background:var(--accent)!important;color:#17211d!important;box-shadow:none!important;}
+.btn-primary{color:#17211d!important;}
+.link-more{background:var(--main-dark)!important;color:#fff!important;}
+.company-title,footer{background:#13231d!important;}
+.hero,.page-hero,.cta,.contact{background:linear-gradient(135deg,#15261f 0%,#173b2e 56%,#1d5844 100%)!important;}
+.message-logo,.service-card,.detail-card,.flow-step,.strength-card,.notice-box,.company-table{border-radius:22px!important;}
+.heading-line{display:inline!important;white-space:normal!important;}
+
+@media(max-width:1024px){
+  .container{width:min(100% - 34px,1180px)!important;}
+  .header-inner{display:grid!important;grid-template-columns:1fr!important;gap:10px!important;min-height:auto!important;padding:10px 0 11px!important;}
+  .brand{min-width:0!important;}
+  .site-logo{max-width:190px!important;max-height:48px!important;}
+  .nav{display:flex!important;width:100%!important;overflow-x:auto!important;overflow-y:hidden!important;gap:8px!important;padding:2px 0 4px!important;scrollbar-width:none!important;-webkit-overflow-scrolling:touch!important;}
+  .nav::-webkit-scrollbar{display:none!important;}
+  .nav a{display:inline-flex!important;align-items:center!important;flex:0 0 auto!important;padding:8px 12px!important;border-radius:999px!important;background:#fff!important;border:1px solid #e2dbcf!important;font-size:12px!important;line-height:1.35!important;white-space:nowrap!important;}
+  .nav a.active{background:var(--main-dark)!important;color:#fff!important;}
+  .nav-button{min-height:42px!important;padding:0 16px!important;}
+  .hero,.page-hero{min-height:auto!important;padding-top:154px!important;padding-bottom:54px!important;}
+  .hero-layout,.page-hero-layout,.section-head,.message-layout,.strength-main,.company-grid,.contact-box{grid-template-columns:1fr!important;gap:28px!important;}
+  .strength-copy{position:static!important;}
+  .hero-photo-card img,.image-main img{height:300px!important;}
+  .hero-mini-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .service-grid,.detail-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .flow-list{grid-template-columns:repeat(2,minmax(0,1fr))!important;}
+  .topics-box{grid-template-columns:1fr!important;}
+  .cta .container{display:grid!important;gap:18px!important;}
+  .quick-points{grid-template-columns:1fr!important;}
+}
+@media(max-width:640px){
+  .container{width:min(100% - 28px,1180px)!important;}
+  .site-logo{max-width:176px!important;max-height:44px!important;}
+  .nav{gap:7px!important;}
+  .nav a{font-size:11.5px!important;padding:7px 11px!important;}
+  .nav-button{min-height:40px!important;padding:0 14px!important;}
+  .hero,.page-hero{padding-top:148px!important;padding-bottom:44px!important;}
+  h1{font-size:clamp(29px,8.4vw,40px)!important;line-height:1.22!important;letter-spacing:-.025em!important;}
+  .lead{font-size:14.5px!important;line-height:1.9!important;margin-bottom:24px!important;}
+  .section-title,.cta h2,.contact .section-title{font-size:clamp(27px,7.3vw,36px)!important;line-height:1.35!important;letter-spacing:-.025em!important;}
+  .section-text,.message-text p,.service-body p,.detail-card p,.flow-step p,.strength-card p,.notice-box p{font-size:14px!important;line-height:1.9!important;}
+  section{padding:58px 0!important;}
+  .hero-actions{display:grid!important;grid-template-columns:1fr!important;gap:10px!important;}
+  .hero-actions .btn,.cta .btn{width:100%!important;}
+  .hero-photo-card,.image-main{border-radius:18px!important;}
+  .hero-photo-card img,.image-main img{height:230px!important;}
+  .hero-mini-grid,.service-grid,.detail-grid,.flow-list{grid-template-columns:1fr!important;}
+  .hero-mini{min-height:auto!important;padding:15px!important;}
+  .service-card img{height:178px!important;}
+  .service-body,.detail-card,.flow-step,.strength-card,.contact-form,.message-logo,.company-title,.notice-box{padding:22px!important;}
+  .service-body h3,.detail-card h3,.flow-step h3,.strength-card h3{font-size:22px!important;line-height:1.45!important;}
+  .strength-card{grid-template-columns:52px 1fr!important;gap:14px!important;}
+  .strength-card strong{font-size:27px!important;}
+  .row{grid-template-columns:1fr!important;}
+  .row dt{padding:12px 16px!important;}
+  .row dd{padding:14px 16px 18px!important;}
+  .form-row{grid-template-columns:1fr!important;}
+  .contact{padding:70px 0!important;}
+  .contact-box{gap:24px!important;}
+  .contact-form{padding:24px!important;border-radius:18px!important;}
+  .form-field input,.form-field select,.form-field textarea{min-height:50px!important;font-size:16px!important;}
+  .form-field textarea{min-height:150px!important;}
+  .form-submit{min-height:54px!important;font-size:15px!important;}
+  .mobile-contact-bar{display:grid!important;grid-template-columns:1fr 1fr!important;gap:10px!important;position:fixed!important;left:12px!important;right:12px!important;bottom:12px!important;z-index:80!important;}
+  .mobile-contact-bar a{min-height:48px!important;display:grid!important;place-items:center!important;border-radius:999px!important;color:#fff!important;font-size:13.5px!important;font-weight:950!important;box-shadow:0 12px 28px rgba(15,23,42,.22)!important;}
+  .mobile-contact-bar a:first-child{background:var(--main)!important;}
+  .mobile-contact-bar a:last-child{background:var(--main-dark)!important;}
+  footer{padding-bottom:92px!important;}
+}
+@media(max-width:380px){
+  .container{width:min(100% - 22px,1180px)!important;}
+  .site-logo{max-width:160px!important;max-height:40px!important;}
+  h1{font-size:27px!important;}
+  .section-title,.cta h2,.contact .section-title{font-size:24px!important;}
+  .nav a{font-size:11px!important;padding:6px 9px!important;}
+  .service-body,.detail-card,.flow-step,.strength-card,.contact-form,.message-logo,.company-title,.notice-box{padding:18px!important;}
+}
+
+
+
+/* 上部ナビの選択中表示を見やすく調整 */
+.nav a:not(.nav-button){
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:42px!important;
+  padding:0 14px!important;
+  border-radius:999px!important;
+  border:1px solid transparent!important;
+  transition:background-color .2s ease,color .2s ease,border-color .2s ease,box-shadow .2s ease!important;
+}
+.nav a:not(.nav-button):hover{
+  color:var(--main)!important;
+  background:rgba(19,59,47,.08)!important;
+  border-color:rgba(19,59,47,.14)!important;
+}
+.nav a.active:not(.nav-button){
+  color:#fff!important;
+  background:var(--main-dark)!important;
+  border-color:var(--main-dark)!important;
+  box-shadow:0 10px 24px rgba(19,59,47,.18)!important;
+}
+.nav a.active:not(.nav-button):hover{
+  color:#fff!important;
+  background:var(--main-dark)!important;
+  border-color:var(--main-dark)!important;
+}
+@media(max-width:1024px){
+  .nav a:not(.nav-button){
+    min-height:40px!important;
+    padding:0 12px!important;
+  }
+  .nav a.active:not(.nav-button){
+    box-shadow:0 8px 18px rgba(19,59,47,.16)!important;
+  }
+}
+@media(max-width:640px){
+  .nav a:not(.nav-button){
+    min-height:38px!important;
+    padding:0 11px!important;
+  }
 }
 
 </style>
@@ -205,12 +194,12 @@ footer{background:#121c18;color:rgba(255,255,255,.78);text-align:center;padding:
 </header>
 
 <main id="top">
-  <section class="page-hero"><div class="container page-hero-layout"><div><div class="kicker">VIDEO PRODUCTION</div><h1><span class="heading-line"><span class="phrase">印象に残る</span><span class="phrase">映像制作。</span></span></h1><p class="lead">SNS向けショート動画から印象的な映像演出まで、目的に合わせて魅力が伝わる動画制作を行います。</p><div class="hero-actions"><a class="btn btn-primary" href="#contact">相談する</a><a class="btn btn-blue" href="index.html#business">事業一覧へ戻る</a></div></div><div class="page-image-stack"><div class="image-main"><img src="mad-production-photo.png" alt="映像制作のイメージ写真"></div><div class="quick-points"><div class="quick-point"><strong>ショート</strong><span>TikTok・YouTube Shorts向け</span></div><div class="quick-point"><strong>フル</strong><span>YouTube向け</span></div><div class="quick-point"><strong>サムネイル制作</strong><span>投稿用サムネ</span></div></div></div></div></section>
-  <section class="detail"><div class="container"><div class="section-head"><div><div class="eyebrow">SERVICE DETAIL</div><h2 class="section-title"><span class="heading-line"><span class="phrase">映像制作で</span><span class="phrase">できること。</span></span></h2></div><p class="section-text">YouTubeやTikTokなどのSNSで見てもらいやすい動画に仕上げます。音楽と映像のタイミング、テンポ、カット、色味、テロップ、エフェクトまで整えます。</p></div><div class="detail-grid"><article class="detail-card"><span>01</span><h3>音ハメ・カット編集</h3><p>曲のビートやサビに合わせてカットを組み、テンポよく見られる動画に仕上げます。</p></article><article class="detail-card"><span>02</span><h3>テロップ・エフェクト</h3><p>歌詞、セリフ、タイトル、光、ブラー、揺れなどの演出で印象を強めます。</p></article><article class="detail-card"><span>03</span><h3>色味・画質調整</h3><p>明るさ、コントラスト、色味を整え、SNSやYouTubeで見やすい画面にします。</p></article><article class="detail-card"><span>04</span><h3>ショート動画化</h3><p>フル動画の見どころを切り出し、ショート動画から本編へ誘導しやすい構成にします。</p></article><article class="detail-card"><span>05</span><h3>サムネイル制作</h3><p>クリックされやすい文字配置や迫力、作品の世界観を意識したサムネイルを作ります。</p></article><article class="detail-card"><span>06</span><h3>投稿文サポート</h3><p>タイトル、説明欄、ハッシュタグ、ファンメイド作品であることの表記など、文章作成もサポートします。</p></article></div><div class="notice-box"><strong>著作権・利用規約について</strong><p>映像制作は、権利者から利用許諾を得た素材、自作素材、利用可能な素材を前提に行います。無断利用を前提とした制作は行いません。公開先の規約や権利関係を確認しながら制作します。</p></div></div></section>
-  <section class="flow"><div class="container"><div class="section-head"><div><div class="eyebrow">FLOW</div><h2 class="section-title"><span class="heading-line"><span class="phrase">ご相談から</span><span class="phrase">導入まで。</span></span></h2></div><p class="section-text">ご相談内容を確認し、構成作成・編集・確認・納品まで進めます。</p></div><div class="flow-list"><div class="flow-step"><strong>1</strong><h3>相談</h3><p>作りたい雰囲気、参考動画、曲、投稿先を確認します。</p></div><div class="flow-step"><strong>2</strong><h3>構成</h3><p>ショート動画向けかフル動画向けかを決め、見せ場を整理します。</p></div><div class="flow-step"><strong>3</strong><h3>編集</h3><p>カット、音ハメ、テロップ、色味、演出を入れて制作します。</p></div><div class="flow-step"><strong>4</strong><h3>確認・納品</h3><p>修正点を確認し、動画ファイルとして納品します。</p></div></div></div></section>
-  <section class="cta"><div class="container"><div><h2><span class="heading-line"><span class="phrase">映像制作を</span><span class="phrase">相談する。</span></span></h2><p>内容がまだ固まっていない段階でも、お気軽にご相談ください。目的、希望時期、内容を分かる範囲でお知らせください。</p></div><a class="btn btn-primary" href="#contact">お問い合わせする</a></div></section>
+  <section class="page-hero"><div class="container page-hero-layout"><div><div class="kicker">MAD / AMV PRODUCTION</div><h1><span class="heading-line">心に残る</span><span class="heading-line">映像制作。</span></h1><p class="lead">ショート動画もフル動画も、作品の魅力が伝わる編集へ。曲の盛り上がり、テンポ、カット、色味、テロップ、サムネイルまで、投稿しやすい形に整えます。</p><div class="hero-actions"><a class="btn btn-primary" href="#contact">相談する</a><a class="btn btn-blue" href="index.html#business">事業一覧へ戻る</a></div></div><div class="page-image-stack"><div class="image-main"><img src="mad-production-photo.png" alt="映像制作のイメージ写真"></div><div class="quick-points"><div class="quick-point"><strong>ショート</strong><span>TikTok・YouTube Shorts向け</span></div><div class="quick-point"><strong>フル</strong><span>YouTube向け</span></div><div class="quick-point"><strong>サムネイル</strong><span>サムネ制作</span></div></div></div></div></section>
+  <section class="detail"><div class="container"><div class="section-head"><div><div class="eyebrow">SERVICE DETAIL</div><h2 class="section-title"><span class="heading-line">映像制作で</span><span class="heading-line">できること。</span></h2></div><p class="section-text">YouTubeやTikTokなどのSNSで見てもらいやすい動画に仕上げます。音楽と映像のタイミング、テンポ、カット、色味、テロップ、エフェクトまで整えます。</p></div><div class="detail-grid"><article class="detail-card"><span>01</span><h3>音ハメ・カット編集</h3><p>曲のビートやサビに合わせてカットを組み、テンポよく見られる動画に仕上げます。</p></article><article class="detail-card"><span>02</span><h3>テロップ・エフェクト</h3><p>歌詞、セリフ、タイトル、光、ブラー、揺れなどの演出で印象を強めます。</p></article><article class="detail-card"><span>03</span><h3>色味・画質調整</h3><p>明るさ、コントラスト、色味を整え、SNSやYouTubeで見やすい画面にします。</p></article><article class="detail-card"><span>04</span><h3>ショート動画化</h3><p>フル動画の見どころを切り出し、ショート動画から本編へ誘導しやすい構成にします。</p></article><article class="detail-card"><span>05</span><h3>サムネイル制作</h3><p>クリックされやすい文字配置や迫力、作品の世界観を意識したサムネイルを作ります。</p></article><article class="detail-card"><span>06</span><h3>投稿文サポート</h3><p>タイトル、説明欄、ハッシュタグ、ファンメイド作品であることの表記など、文章作成もサポートします。</p></article></div><div class="notice-box"><strong>著作権・利用規約について</strong><p>映像制作は、権利者から利用許諾を得た素材、自作素材、利用可能な素材を前提に行います。無断利用を前提とした制作は行いません。公開先の規約や権利関係を確認しながら制作します。</p></div></div></section>
+  <section class="flow"><div class="container"><div class="section-head"><div><div class="eyebrow">FLOW</div><h2 class="section-title"><span class="heading-line">ご相談から</span><span class="heading-line">納品まで。</span></h2></div><p class="section-text">ご相談内容を確認し、構成作成・編集・確認・納品まで進めます。</p></div><div class="flow-list"><div class="flow-step"><strong>1</strong><h3>相談</h3><p>作りたい雰囲気、参考動画、曲、投稿先を確認します。</p></div><div class="flow-step"><strong>2</strong><h3>構成</h3><p>ショート動画向けかフル動画向けかを決め、見せ場を整理します。</p></div><div class="flow-step"><strong>3</strong><h3>編集</h3><p>カット、音ハメ、テロップ、色味、演出を入れて制作します。</p></div><div class="flow-step"><strong>4</strong><h3>確認・納品</h3><p>修正点を確認し、動画ファイルとして納品します。</p></div></div></div></section>
+  <section class="cta"><div class="container"><div><h2><span class="heading-line">映像制作を</span><span class="heading-line">相談する。</span></h2><p>内容がまだ固まっていない段階でも、お気軽にご相談ください。目的、希望時期、内容を分かる範囲でお知らせください。</p></div><a class="btn btn-primary" href="#contact">お問い合わせする</a></div></section>
   
-<section id="contact" class="contact"><div class="container contact-box"><div><div class="eyebrow">CONTACT</div><h2 class="section-title"><span class="heading-line"><span class="phrase">映像制作の</span><span class="phrase">ご相談はこちら。</span></span></h2><p>サービス内容や進め方について、分かりやすくご案内します。</p></div><form class="contact-form" id="contactForm"><div class="form-row"><div class="form-field"><label for="name">お名前</label><input id="name" name="name" type="text" placeholder="山田 太郎" required></div><div class="form-field"><label for="companyInput">会社名・店舗名・チャンネル名（任意）</label><input id="companyInput" name="company" type="text" placeholder="株式会社〇〇 / チャンネル名"></div></div><div class="form-field"><label for="type">お問い合わせ内容</label><select id="type" name="type"><option>業務委託</option><option>携帯イベント企画・運営</option><option>アプリ開発</option><option>Webサイト制作</option><option selected>映像制作</option><option>映像制作</option><option>サムネイル制作</option><option>その他</option></select></div><div class="form-field"><label for="messageInput">ご相談内容</label><textarea id="messageInput" name="message" placeholder="ご相談内容をご入力ください。例：Webサイトを作りたい、アプリを作りたい、映像制作を相談したいなど" required></textarea></div><p class="form-note">入力内容はこのページ内で確認できます。公開時は必要に応じて送信方法を設定してください。</p><button class="form-submit" type="submit">内容を確認する</button></form></div></section>
+<section id="contact" class="contact"><div class="container contact-box"><div><div class="eyebrow">CONTACT</div><h2 class="section-title"><span class="heading-line">映像制作の</span><span class="heading-line">ご相談はこちら。</span></h2><p>ご相談内容を確認し、必要な内容や進め方をご案内します。</p></div><form class="contact-form" id="contactForm"><div class="form-row"><div class="form-field"><label for="name">お名前</label><input id="name" name="name" type="text" placeholder="山田 太郎" required></div><div class="form-field"><label for="companyInput">会社名・店舗名・チャンネル名（任意）</label><input id="companyInput" name="company" type="text" placeholder="株式会社〇〇 / チャンネル名"></div></div><div class="form-field"><label for="type">お問い合わせ内容</label><select id="type" name="type"><option>業務委託</option><option>携帯イベント企画・運営</option><option>アプリ開発</option><option>Webサイト制作</option><option selected>映像制作</option><option>映像制作</option><option>サムネイル制作</option><option>その他</option></select></div><div class="form-field"><label for="messageInput">ご相談内容</label><textarea id="messageInput" name="message" placeholder="ご相談内容をご入力ください。例：Webサイトを作りたい、アプリを作りたい、映像制作を相談したいなど" required></textarea></div><p class="form-note">送信内容を確認し、担当者より対応いたします。必要に応じて送信先設定を行ってください。</p><button class="form-submit" type="submit">この内容でお問い合わせする</button></form></div></section>
 </main>
 <footer><div class="container"><p>© NABEX株式会社 All Rights Reserved.</p></div></footer><div class="mobile-contact-bar" aria-label="スマホ固定メニュー"><a href="#contact">相談する</a><a href="index.html#business">事業一覧</a></div><script>
 
@@ -221,10 +210,13 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
     const name = document.getElementById('name')?.value || '';
     const company = document.getElementById('companyInput')?.value || '';
+    const email = document.getElementById('email')?.value || '';
+    const tel = document.getElementById('tel')?.value || '';
     const type = document.getElementById('type')?.value || '';
     const message = document.getElementById('messageInput')?.value || '';
-    const body = `お名前：${name}\n会社名・店舗名・チャンネル名（任意）：${company}\nお問い合わせ内容：${type}\n\nご相談内容：\n${message}`;
-    alert('入力内容を確認しました。\n\n' + body);
+    const subject = '【NABEX株式会社】お問い合わせ：' + type;
+    const body = `お名前：${name}\n会社名・店舗名・チャンネル名（任意）：${company}\nメールアドレス：${email}\n電話番号：${tel}\nお問い合わせ内容：${type}\n\nご相談内容：\n${message}`;
+    location.href = `?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
   });
 });
 
